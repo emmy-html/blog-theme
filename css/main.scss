@@ -349,6 +349,16 @@ header {
     }
   }
 }
+/* Footer */ 
+footer {
+  .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  i {
+    margin-left: 10px;
+  }
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
