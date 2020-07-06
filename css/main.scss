@@ -123,6 +123,7 @@ hr {
 }
 input::placeholder,
 input[type="submit"] {
+  font-family: $heading-font;
   text-transform: lowercase;
 }
 .post-category {
@@ -347,7 +348,7 @@ header {
     @include content-border;
     background: white;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     .post-desc {
       .post-category a:link,
       .post-category a:visited {
@@ -512,6 +513,7 @@ header {
           background: $light-blue;
           border: none;
           color: $white;
+          font-size: 1.5rem;
           font-weight: $bold;
           padding: 20px;
           margin-top: 5px;
@@ -712,6 +714,53 @@ header {
     }
   }
 }
+/* Contact Page */ 
+.contact-content {
+  padding-top: 50px;
+  h1 {
+    font-size: 1.75rem;
+    text-align: center;
+    padding-bottom: 25px;
+    text-transform: uppercase;
+    span {
+      color: $dark-pink;
+    }
+  }
+  form.contact {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column wrap;
+    align-items: center;
+    input[type="text"] {
+      border: 2px solid $light-blue;
+      margin: 5px 0px;
+      padding: 5px 0px 5px 5px;
+    }
+    .name,
+    .email,
+    .subject {
+      width: 100%;
+    }
+    input[type="text"].message {
+      width: 100%; 
+      padding-bottom: 100px;
+    }
+    input[type="submit"] {
+      background: $light-blue;
+      border: none;
+      color: $white;
+      font-size: 1.5rem;
+      font-weight: $bold;
+      padding: 20px;
+      margin-top: 5px;
+      width: 50%;
+      &:hover {
+        background: $dark-pink;
+        transition: 1s;
+      }
+    }
+  }
+}
 /* Footer */ 
 footer {
   .content-wrapper {
@@ -745,7 +794,8 @@ footer {
       align-items: flex-start;
     }
     .blog-posts,
-    .single-post {
+    .single-post,
+    .contact-content {
       width: 400px;
     }
     .blog-sidebar {
@@ -770,7 +820,8 @@ footer {
   }
   #blog {
     .blog-posts,
-    .single-post {
+    .single-post,
+    .contact-content {
       width: 800px;
     }
     .blog-desc-border {
@@ -826,6 +877,27 @@ footer {
       width: 300px;
       .sidebar-socials {
         padding-top: 250px;
+      }
+    }
+  }
+  /* Contact Page */ 
+  .contact-content {
+    form.contact {
+      display: flex;
+      justify-content: space-between;
+      flex-flow: row wrap;
+      align-items: center;
+      .name,
+      .email,
+      .subject {
+        width: 30%;
+      }
+      input[type="text"].message {
+        width: 100%; 
+        padding-bottom: 100px;
+      }
+      input[type="submit"] {
+        width: 25%;
       }
     }
   }
