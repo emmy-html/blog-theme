@@ -260,11 +260,13 @@ header nav ul {
       #featured .featured-content-container .post-title a:link:hover,
       #featured .featured-content-container .post-title a:visited:hover {
         color: #F7F4EA; }
-  #featured .featured-content-container .post-category a {
+  #featured .featured-content-container .post-category a:link,
+  #featured .featured-content-container .post-category a:visited {
     background: #D90368;
     color: #F7F4EA;
     padding: 1px 5px; }
-    #featured .featured-content-container .post-category a:hover {
+    #featured .featured-content-container .post-category a:link:hover,
+    #featured .featured-content-container .post-category a:visited:hover {
       background: #00948a; }
   #featured .featured-content-container .publish-date {
     color: #D90368; }
@@ -289,7 +291,25 @@ header nav ul {
     margin: 170px 10px 0px 10px;
     padding: 5px;
     background: white;
-    margin: 0; }
+    margin: 0;
+    padding: 0; }
+    #blog .blog-desc-border .post-desc .post-category a:link,
+    #blog .blog-desc-border .post-desc .post-category a:visited {
+      background: #D90368;
+      color: white;
+      padding: 1px 5px; }
+      #blog .blog-desc-border .post-desc .post-category a:link:hover,
+      #blog .blog-desc-border .post-desc .post-category a:visited:hover {
+        background: #00948a;
+        transition: 1s; }
+    #blog .blog-desc-border .post-desc .post-title a:link,
+    #blog .blog-desc-border .post-desc .post-title a:visited {
+      color: #00948a; }
+      #blog .blog-desc-border .post-desc .post-title a:link:hover,
+      #blog .blog-desc-border .post-desc .post-title a:visited:hover {
+        color: #F7F4EA; }
+    #blog .blog-desc-border .post-desc .publish-date {
+      color: #D90368; }
   #blog .blog-posts {
     /* Blog Post Excerpts */ }
     #blog .blog-posts article {
@@ -339,7 +359,8 @@ header nav ul {
             color: #D90368;
             transition: 1s; }
   #blog .single-post .blog-desc-border {
-    width: 100%; }
+    width: 100%;
+    padding: 0; }
     #blog .single-post .blog-desc-border .post-desc {
       padding: 10px; }
   #blog .single-post .publish-date {
@@ -351,12 +372,16 @@ header nav ul {
     width: 100%; }
   #blog .single-post .post-title {
     line-height: 1.75rem; }
+  #blog .single-post hr {
+    margin-top: 5px;
+    border-top: 5px solid #D90368; }
   #blog .single-post .comment-section {
     width: 100%;
     /* Comment Form */ }
     #blog .single-post .comment-section h2 {
       padding: 25px 0px;
-      text-align: center; }
+      text-align: center;
+      text-transform: lowercase; }
     #blog .single-post .comment-section .comment .commenter-info {
       display: flex;
       align-items: center;
@@ -366,19 +391,40 @@ header nav ul {
         width: 50px;
         height: 50px; }
       #blog .single-post .comment-section .comment .commenter-info h3 {
+        color: #00948a;
+        font-family: "Yeseva One", cursive;
         padding-left: 10px; }
     #blog .single-post .comment-section .comment .comment-metadata {
+      color: #D90368;
       font-weight: 700;
+      padding-bottom: 20px;
       text-transform: uppercase; }
-    #blog .single-post .comment-section form {
-      width: 96%; }
-      #blog .single-post .comment-section form input[type="text"] {
+    #blog .single-post .comment-section form.comment-form {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: center; }
+      #blog .single-post .comment-section form.comment-form .name {
+        width: 47%; }
+      #blog .single-post .comment-section form.comment-form .email {
+        width: 47%; }
+      #blog .single-post .comment-section form.comment-form input[type="text"].comment-space {
         width: 100%;
+        padding-bottom: 100px; }
+      #blog .single-post .comment-section form.comment-form input[type="text"] {
+        border: 2px solid #00948a;
         margin: 5px 0px;
         padding: 5px 0px 5px 5px; }
-      #blog .single-post .comment-section form input[type="submit"] {
-        padding: 10px;
+      #blog .single-post .comment-section form.comment-form input[type="submit"] {
+        background: #00948a;
+        border: none;
+        color: #F7F4EA;
+        font-weight: 700;
+        padding: 20px;
         margin-top: 5px; }
+        #blog .single-post .comment-section form.comment-form input[type="submit"]:hover {
+          background: #D90368;
+          transition: 1s; }
   #blog .blog-sidebar {
     display: flex;
     flex-direction: column;
